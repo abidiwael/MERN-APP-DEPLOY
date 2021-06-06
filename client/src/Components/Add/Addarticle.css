@@ -1,0 +1,162 @@
+.btn_add{
+    margin-top: 5px;
+    float: right;
+    margin-right: 120px;
+    height: 50px;
+    width: 120px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: rgb(17, 198, 204) !important;
+    
+}
+.bodyadd {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background:linear-gradient(135deg, #065f9b, #04455f);
+    margin-right: 120px;
+    
+}
+
+.search {
+    margin-bottom: 10px; 
+    margin-top: 5px;   
+    height: 70px;
+    background-color: #fff;
+    padding: 10px;
+    margin-right: 1px;
+    float: right;
+}
+
+.search-input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    margin-top: 5px;
+    caret-color: transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    margin-right: 200px;
+    float: right;
+}
+
+.search .search-input {
+    padding: 0 10px;
+    width: 350px;
+    caret-color: #536bf6;
+    font-size: 21px;
+    font-weight: 100;
+    color: black;
+    transition: width 0.4s linear;
+    float: right;
+    
+    
+}
+
+.search:hover>.search-icon {
+    background: #ffffff;
+    color: #1A237E
+}
+
+.search-icon {
+    height: 50px;
+    width: 50px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #536bf6;
+    margin-right:0px;
+}
+
+a:link {
+    text-decoration: none
+}
+
+.starbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.animatedstar {
+    display: inline-block;
+    margin: 10px;
+    position: relative
+}
+
+.animatedstar i {
+    color: rgb(240, 102, 11);
+    filter: grayscale(100%);
+    position: relative
+}
+
+.animatedstar:hover i {
+    animation: change 1s forwards
+}
+
+@keyframes change {
+    50% {
+        transform: scale(0);
+        filter: grayscale(100%)
+    }
+
+    51% {
+        filter: grayscale(0%)
+    }
+
+    100% {
+        transform: scale(1);
+        filter: grayscale(0%)
+    }
+}
+
+.animatedstar:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 45px);
+    left: calc(50% - 45px);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border-color: rgb(255, 81, 0);
+    border-style: solid;
+    border-width: 45px;
+    transform: scale(0);
+    box-sizing: border-box
+}
+
+.animatedstar:hover::before {
+    transition: transform 0.5s, border-width 0.5s 0.5s;
+    border-width: 0;
+    transform: scale(1)
+}
+
+.animatedstar::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: calc(50% - 80px);
+    top: calc(50% - 80px);
+    background: radial-gradient(circle, red 50%, transparent 60%), radial-gradient(circle, red 50%, transparent 60%), radial-gradient(circle, red 50%, transparent 60%), radial-gradient(circle, red 50%, transparent 60%), radial-gradient(circle, orange 50%, transparent 60%), radial-gradient(circle, orange 50%, transparent 60%), radial-gradient(circle, orange 50%, transparent 60%), radial-gradient(circle, orange 50%, transparent 60%);
+    background-size: 16px 16px;
+    background-position: calc(50% - 50px) calc(50% - 50px), calc(50% + 50px) calc(50% - 50px), calc(50% - 50px) calc(50% + 50px), calc(50% + 50px) calc(50% + 50px), calc(50% + 0px) calc(50% + 70px), calc(50% + 70px) calc(50% + 0px), calc(50% - 70px) calc(50% + 0px), calc(50% + 0px) calc(50% - 70px);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    transform: scale(0)
+}
+
+.animatedstar:hover:after {
+    transform: scale(1);
+    opacity: 0;
+    background-size: 0 0;
+    transition: transform 0.5s 0.5s, opacity 0.4s 0.9s, background-size 0.5s 0.9s
+}

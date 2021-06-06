@@ -1,0 +1,1 @@
+export const GET_ALL_COMENTS="GET_ALL_COMENTS"
